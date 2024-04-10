@@ -42,7 +42,7 @@
     <section class="section featured" aria-label="featured post">
       <div class="container">
 
-<p class="section-subtitle">
+        <p class="section-subtitle">
           Commencez avec nos <strong class="strong">meilleures histoires</strong>
         </p>
 
@@ -52,21 +52,21 @@
             <div class="blog-card">
 
               <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                <img src="./assets/images/featured-1.jpg" width="500" height="600" loading="lazy"
+                <img src="{{ asset('user/assets/images/zoo.jpg') }}" width="500" height="600" loading="lazy"
                   alt="New technology is not good or evil in and of itself" class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-1.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-1.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-2.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-2.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -78,32 +78,28 @@
 
                 <ul class="card-meta-list">
 
-                  <li>
-                    <a href="#" class="card-tag">Design</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Idea</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Review</a>
-                  </li>
+                    <li>
+                        <a href="#" class="card-tag">Forêt</a>
+                    </li>
+        
+                    <li>
+                        <a href="#" class="card-tag">Idée</a>
+                    </li>
+        
+                    <li>
+                        <a href="#" class="card-tag">Revue</a>
+                    </li>
 
                 </ul>
 
                 <h3 class="h4">
-                  <a href="#" class="card-title hover:underline">
-                    New technology is not good or evil in and of itself
-                  </a>
-                </h3>
+                    <a href="#" class="card-title hover:underline">
+                      Sont-ils plus intelligent que Nous ? 
+                    </a>
+                  </h3>
 
                 <p class="card-text">
-                  Vestibulum vehicula dui venenatis neque tempor, accumsan iaculis sapien ornare. Sed at ante porta,
-                  ullamcorper massa eu,
-                  ullamcorper sapien. Donec pretium tortor augue. Integer egestas ut tellus sed pretium. Nullam
-                  tristique augue ut mattis
-                  vulputate. Duis et lorem in odio ultricies porttitor.
+                  Les gorilles, ces majestueux primates habitant les forêts d'Afrique, sont des créatures étonnantes qui suscitent admiration et curiosité. Outre leur force physique impressionnante, ils possèdent également une intelligence remarquable. Dans cet article, nous explorerons la question de savoir si les gorilles sont plus intelligents que nous, les humains, et comment leur intelligence complexe renforce notre compréhension de notre lien étroit avec le règne animal.
                 </p>
 
               </div>
@@ -115,14 +111,14 @@
             <div class="blog-card">
 
               <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                <img src="./assets/images/featured-2.jpg" width="500" height="600" loading="lazy"
+                <img src="{{ asset('user/assets/images/rdc.jpg') }}" width="500" height="600" loading="lazy"
                   alt="It’s a new era in design, there are no rules" class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-3.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-3.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -135,26 +131,15 @@
                 <ul class="card-meta-list">
 
                   <li>
-                    <a href="#" class="card-tag">Creative</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Product</a>
+                    <a href="#" class="card-tag">Politique</a>
                   </li>
 
                 </ul>
 
-                <h3 class="h4">
-                  <a href="#" class="card-title hover:underline">
-                    It’s a new era in design, there are no rules
-                  </a>
-                </h3>
+                <h3 class="h4"> <a href="#" class="card-title hover:underline"> C'est une nouvelle ère en RDC, il n'y a pas que des hommes 1er Ministre </a> </h3>
 
                 <p class="card-text">
-                  Quibus autem in rebus tanta obscuratio non fit, fieri tamen potest, ut id ipsum, quod interest, non
-                  sit magnum. Ita fit
-                  ut, quanta differentia est in principiis naturalibus, tanta sit in finibus bonorum malorumque
-                  dissimilitudo.
+                  Nous sommes ravis de voir une nouvelle ère s'épanouir en République démocratique du Congo (RDC), où le pays embrasse la diversité et l'inclusion dans la nomination de son Premier Ministre. Il est encourageant de constater que les critères de sélection ne se limitent plus au genre, mais s'étendent aux compétences, au leadership et à la vision.
                 </p>
 
               </div>
@@ -166,14 +151,14 @@
             <div class="blog-card">
 
               <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                <img src="./assets/images/featured-3.jpg" width="500" height="600" loading="lazy"
+                <img src="{{ asset('user/assets/images/chaleur.jpg') }}" width="500" height="600" loading="lazy"
                   alt="Perfection has to do with the end product" class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-4.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-4.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -186,31 +171,27 @@
                 <ul class="card-meta-list">
 
                   <li>
-                    <a href="#" class="card-tag">Design</a>
+                    <a href="#" class="card-tag">Température</a>
                   </li>
 
                   <li>
-                    <a href="#" class="card-tag">Creative</a>
+                    <a href="#" class="card-tag">Climat</a>
                   </li>
 
                   <li>
-                    <a href="#" class="card-tag">Idea</a>
+                    <a href="#" class="card-tag">Réchaufement</a>
                   </li>
 
                 </ul>
 
                 <h3 class="h4">
                   <a href="#" class="card-title hover:underline">
-                    Perfection has to do with the end product
+                    Le réchaufement climatique au coeur de la Capital
                   </a>
                 </h3>
 
                 <p class="card-text">
-                  Aenean eget urna aliquet, viverra orci quis, aliquam erat. Ut rutrum quam quam, eu eleifend est
-                  blandit et. Vivamus
-                  suscipit ultrices venenatis. Aliquam massa ipsum, porta quis hendrerit at, varius sed leo. Curabitur
-                  convallis urna sit
-                  amet mi tempus posuere.
+                  La République démocratique du Congo (RDC) est un pays situé en Afrique centrale, et sa capitale est Kinshasa. Bien que Kinshasa soit située près de l'équateur, où les températures peuvent être élevées, il est peu probable qu'elle subisse régulièrement des températures de plus de 43°C. Les températures moyennes à Kinshasa varient généralement entre 20°C et 32°C tout au long de l'année.
                 </p>
 
               </div>
@@ -222,21 +203,14 @@
             <div class="blog-card">
 
               <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                <img src="./assets/images/featured-4.jpg" width="500" height="600" loading="lazy"
+                <img src="{{ asset('user/assets/images/dollard.jpg') }}" width="500" height="600" loading="lazy"
                   alt="Everyone has a different life story" class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-5.jpg" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-2.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -249,26 +223,23 @@
                 <ul class="card-meta-list">
 
                   <li>
-                    <a href="#" class="card-tag">People</a>
+                    <a href="#" class="card-tag">Politique</a>
                   </li>
 
                   <li>
-                    <a href="#" class="card-tag">Story</a>
+                    <a href="#" class="card-tag">Finance</a>
                   </li>
 
                 </ul>
 
                 <h3 class="h4">
                   <a href="#" class="card-title hover:underline">
-                    Everyone has a different life story
+                    Le franc congolais perd face au dollard américain
                   </a>
                 </h3>
 
                 <p class="card-text">
-                  Non est igitur summum malum dolor. Tu autem inter haec tantam multitudinem hominum interiectam non
-                  vides nec laetantium
-                  nec dolentium. Nunc vero a primo quidem mirabiliter occulta natura est nec perspici nec cognosci
-                  potest.
+                  Au fil du temps, le franc congolais a connu des fluctuations significatives par rapport au dollar américain. Des périodes de dépréciation et de volatilité ont été observées, ce qui a eu des répercussions sur l'économie congolaise dans son ensemble. La dépréciation du franc congolais peut entraîner une augmentation des prix des biens importés, rendant la vie plus difficile pour de nombreux ménages et entreprises qui dépendent de ces produits.
                 </p>
 
               </div>
@@ -276,108 +247,7 @@
             </div>
           </li>
 
-          <li class="scrollbar-item">
-            <div class="blog-card">
 
-              <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                <img src="./assets/images/featured-5.jpg" width="500" height="600" loading="lazy"
-                  alt="The difference is quality" class="img-cover">
-
-                <ul class="avatar-list absolute">
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-6.jpg" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                </ul>
-              </figure>
-
-              <div class="card-content">
-
-                <ul class="card-meta-list">
-
-                  <li>
-                    <a href="#" class="card-tag">Design</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Lifestyle</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Idea</a>
-                  </li>
-
-                </ul>
-
-                <h3 class="h4">
-                  <a href="#" class="card-title hover:underline">
-                    The difference is quality
-                  </a>
-                </h3>
-
-                <p class="card-text">
-                  Vide, ne etiam menses! nisi forte eum dicis, qui, simul atque arripuit, interficit. Atque his de
-                  rebus et splendida est
-                  eorum et illustris oratio.
-                </p>
-
-              </div>
-
-            </div>
-          </li>
-
-          <li class="scrollbar-item">
-            <div class="blog-card">
-
-              <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                <img src="./assets/images/featured-6.jpg" width="500" height="600" loading="lazy"
-                  alt="Problems are not stop signs, they are guidelines" class="img-cover">
-
-                <ul class="avatar-list absolute">
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-3.jpg" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                </ul>
-              </figure>
-
-              <div class="card-content">
-
-                <ul class="card-meta-list">
-
-                  <li>
-                    <a href="#" class="card-tag">Idea</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Creating</a>
-                  </li>
-
-                </ul>
-
-                <h3 class="h4">
-                  <a href="#" class="card-title hover:underline">
-                    Problems are not stop signs, they are guidelines
-                  </a>
-                </h3>
-
-                <p class="card-text">
-                  Quid ad utilitatem tantae pecuniae. Duo enim genera quae erant, fecit tria. Et quod est munus, quod
-                  opus sapientiae.
-                </p>
-
-              </div>
-
-            </div>
-          </li>
 
         </ul>
 
@@ -398,7 +268,7 @@
         <div class="title-wrapper">
 
           <h2 class="h2 section-title">
-            See what we’ve <strong class="strong">written lately</strong>
+            Découvrez ce que la plume d'infos a récemment <strong class="strong">écrit</strong>
           </h2>
 
           <div class="top-author">
@@ -406,62 +276,54 @@
 
               <li class="avatar-item">
                 <a href="#" class="avatar large img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/author-1.jpg" width="100" height="100" alt="top author" class="img-cover">
+                  <img src="{{ asset('user/assets/images/author-1.jpg') }}" width="100" height="100" alt="top author" class="img-cover">
                 </a>
               </li>
 
               <li class="avatar-item">
                 <a href="#" class="avatar large img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/author-2.jpg" width="100" height="100" alt="top author" class="img-cover">
+                  <img src="{{ asset('user/assets/images/author-2.jpg') }}" width="100" height="100" alt="top author" class="img-cover">
                 </a>
               </li>
 
               <li class="avatar-item">
                 <a href="#" class="avatar large img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/author-3.jpg" width="100" height="100" alt="top author" class="img-cover">
+                  <img src="{{ asset('user/assets/images/author-3.jpg') }}" width="100" height="100" alt="top author" class="img-cover">
                 </a>
               </li>
 
               <li class="avatar-item">
                 <a href="#" class="avatar large img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/author-4.jpg" width="100" height="100" alt="top author" class="img-cover">
+                  <img src="{{ asset('user/assets/images/author-4.jpg') }}" width="100" height="100" alt="top author" class="img-cover">
                 </a>
               </li>
 
               <li class="avatar-item">
                 <a href="#" class="avatar large img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/author-5.jpg" width="100" height="100" alt="top author" class="img-cover">
+                  <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" alt="top author" class="img-cover">
                 </a>
               </li>
 
             </ul>
 
-            <span class="span">Meet our top authors</span>
+            <span class="span">Voir nos Plumeurs</span>
           </div>
 
         </div>
 
         <ul class="grid-list">
-
-          <li>
+          <li class="scrollbar-item">
             <div class="blog-card">
 
-              <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
-                <img src="./assets/images/recent-1.jpg" width="550" height="660" loading="lazy"
-                  alt="Creating is a privilege but it’s also a gift" class="img-cover">
+              <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                <img src="{{ asset('user/assets/images/santé.jpg') }}" width="500" height="600" loading="lazy"
+                  alt="Everyone has a different life story" class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-3.jpg" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-5.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -474,48 +336,41 @@
                 <ul class="card-meta-list">
 
                   <li>
-                    <a href="#" class="card-tag">Lifestyle</a>
+                    <a href="#" class="card-tag">Santé</a>
                   </li>
 
                   <li>
-                    <a href="#" class="card-tag">People</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Review</a>
+                    <a href="#" class="card-tag">Environnement</a>
                   </li>
 
                 </ul>
 
                 <h3 class="h4">
                   <a href="#" class="card-title hover:underline">
-                    Creating is a privilege but it’s also a gift
+                    La santé à quel prix
                   </a>
                 </h3>
 
                 <p class="card-text">
-                  Nullam vel lectus vel velit pellentesque dignissim nec id magna. Cras molestie ornare quam at
-                  semper. Proin a ipsum ex.
-                  Curabitur eu venenatis justo. Nullam felis augue, imperdiet at sodales a, sollicitudin nec risus.
+                  Au fil du temps, le franc congolais a connu des fluctuations significatives par rapport au dollar américain. Des périodes de dépréciation et de volatilité ont été observées, ce qui a eu des répercussions sur l'économie congolaise dans son ensemble. La dépréciation du franc congolais peut entraîner une augmentation des prix des biens importés, rendant la vie plus difficile pour de nombreux ménages et entreprises qui dépendent de ces produits.
                 </p>
 
               </div>
 
             </div>
           </li>
-
-          <li>
+          <li class="scrollbar-item">
             <div class="blog-card">
 
-              <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
-                <img src="./assets/images/recent-2.jpg" width="550" height="660" loading="lazy"
-                  alt="Being unique is better than being perfect" class="img-cover">
+              <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                <img src="{{ asset('user/assets/images/economie.jpg') }}" width="500" height="600" loading="lazy"
+                  alt="Everyone has a different life story" class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-5.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -528,64 +383,41 @@
                 <ul class="card-meta-list">
 
                   <li>
-                    <a href="#" class="card-tag">Design</a>
+                    <a href="#" class="card-tag">Comptabilité</a>
                   </li>
 
                   <li>
-                    <a href="#" class="card-tag">Product</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Idea</a>
+                    <a href="#" class="card-tag">Finance</a>
                   </li>
 
                 </ul>
 
                 <h3 class="h4">
                   <a href="#" class="card-title hover:underline">
-                    Being unique is better than being perfect
+                    Le Taux d'agroissement dans le Monde à doublé depuis 2000
                   </a>
                 </h3>
 
                 <p class="card-text">
-                  Nam in pretium dui. Phasellus dapibus, mi at molestie cursus, neque eros aliquet nisi, non
-                  efficitur nisi est nec mi.
-                  Nullam semper, ligula a luctus ornare, leo turpis fermentum lectus, quis volutpat urna orci a
-                  lectus. Duis et odio
-                  lobortis, auctor justo ut, egestas magna.
+                  Au fil du temps, le franc congolais a connu des fluctuations significatives par rapport au dollar américain. Des périodes de dépréciation et de volatilité ont été observées, ce qui a eu des répercussions sur l'économie congolaise dans son ensemble. La dépréciation du franc congolais peut entraîner une augmentation des prix des biens importés, rendant la vie plus difficile pour de nombreux ménages et entreprises qui dépendent de ces produits.
                 </p>
 
               </div>
 
             </div>
           </li>
-
-          <li>
+          <li class="scrollbar-item">
             <div class="blog-card">
 
-              <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
-                <img src="./assets/images/recent-3.jpg" width="550" height="660" loading="lazy"
-                  alt="Now we’re getting somewhere" class="img-cover">
+              <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                <img src="{{ asset('user/assets/images/portdematadi.jpg') }}" width="500" height="600" loading="lazy"
+                  alt="Everyone has a different life story" class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-2.jpg" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-5.jpg" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-1.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -598,50 +430,41 @@
                 <ul class="card-meta-list">
 
                   <li>
-                    <a href="#" class="card-tag">Idea</a>
+                    <a href="#" class="card-tag">Politique</a>
                   </li>
 
                   <li>
-                    <a href="#" class="card-tag">Product</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Review</a>
+                    <a href="#" class="card-tag">Finance</a>
                   </li>
 
                 </ul>
 
                 <h3 class="h4">
                   <a href="#" class="card-title hover:underline">
-                    Now we’re getting somewhere
+                    Le port de Matadi est-il vivant ou mort ? 
                   </a>
                 </h3>
 
                 <p class="card-text">
-                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec
-                  volutpat rhoncus quam,
-                  a feugiat elit gravida eget. Curabitur id pharetra ligula. Integer porttitor suscipit ante ac
-                  faucibus. Sed a enim non
-                  enim viverra pulvinar vel diam ut lorem congue feugiat.
+                  Au fil du temps, le franc congolais a connu des fluctuations significatives par rapport au dollar américain. Des périodes de dépréciation et de volatilité ont été observées, ce qui a eu des répercussions sur l'économie congolaise dans son ensemble. La dépréciation du franc congolais peut entraîner une augmentation des prix des biens importés, rendant la vie plus difficile pour de nombreux ménages et entreprises qui dépendent de ces produits.
                 </p>
 
               </div>
 
             </div>
           </li>
-
-          <li>
+          <li class="scrollbar-item">
             <div class="blog-card">
 
-              <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
-                <img src="./assets/images/recent-4.jpg" width="550" height="660" loading="lazy"
-                  alt="The trick to getting more done is to have the freedom to roam around" class="img-cover">
+              <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                <img src="{{ asset('user/assets/images/estDuPays.jpg') }}" width="500" height="600" loading="lazy"
+                  alt="Everyone has a different life story" class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-3.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -654,52 +477,41 @@
                 <ul class="card-meta-list">
 
                   <li>
-                    <a href="#" class="card-tag">Lifestyle</a>
+                    <a href="#" class="card-tag">Conflit</a>
                   </li>
 
                   <li>
-                    <a href="#" class="card-tag">Design</a>
+                    <a href="#" class="card-tag">Finance</a>
                   </li>
 
                 </ul>
 
                 <h3 class="h4">
                   <a href="#" class="card-title hover:underline">
-                    The trick to getting more done is to have the freedom to roam around
+                    Le M23 qui le finance ? 
                   </a>
                 </h3>
 
                 <p class="card-text">
-                  Integer nec mi cursus, blandit est et, auctor mauris. Aenean ex metus, faucibus in mattis at,
-                  tincidunt eu dolor. Cras
-                  hendrerit massa nec augue placerat rutrum. Sed facilisis massa enim, ac tempus diam elementum sit
-                  amet.
+                  Au fil du temps, le franc congolais a connu des fluctuations significatives par rapport au dollar américain. Des périodes de dépréciation et de volatilité ont été observées, ce qui a eu des répercussions sur l'économie congolaise dans son ensemble. La dépréciation du franc congolais peut entraîner une augmentation des prix des biens importés, rendant la vie plus difficile pour de nombreux ménages et entreprises qui dépendent de ces produits.
                 </p>
 
               </div>
 
             </div>
           </li>
-
-          <li>
+          <li class="scrollbar-item">
             <div class="blog-card">
 
-              <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
-                <img src="./assets/images/recent-5.jpg" width="550" height="660" loading="lazy"
-                  alt="Every day, in every city and town across the country" class="img-cover">
+              <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                <img src="{{ asset('user/assets/images/fruit.jpg') }}" width="500" height="600" loading="lazy"
+                  alt="Everyone has a different life story" class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-1.jpg" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-6.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -712,48 +524,41 @@
                 <ul class="card-meta-list">
 
                   <li>
-                    <a href="#" class="card-tag">People</a>
+                    <a href="#" class="card-tag">Santé</a>
                   </li>
 
                   <li>
-                    <a href="#" class="card-tag">Story</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Lifestyle</a>
+                    <a href="#" class="card-tag">Bien être</a>
                   </li>
 
                 </ul>
 
                 <h3 class="h4">
                   <a href="#" class="card-title hover:underline">
-                    Every day, in every city and town across the country
+                    Le legume sont-ils vraiment importants ? L'avis d'un expert de l'Unikin
                   </a>
                 </h3>
 
                 <p class="card-text">
-                  Morbi a facilisis lectus. Ut eu dapibus risus, a interdum justo. Vestibulum volutpat velit ac
-                  tellus mollis, sit amet
-                  sodales metus elementum. Aliquam eu mi massa. Proin suscipit enim a pulvinar viverra.
+                  Au fil du temps, le franc congolais a connu des fluctuations significatives par rapport au dollar américain. Des périodes de dépréciation et de volatilité ont été observées, ce qui a eu des répercussions sur l'économie congolaise dans son ensemble. La dépréciation du franc congolais peut entraîner une augmentation des prix des biens importés, rendant la vie plus difficile pour de nombreux ménages et entreprises qui dépendent de ces produits.
                 </p>
 
               </div>
 
             </div>
           </li>
-
-          <li>
+          <li class="scrollbar-item">
             <div class="blog-card">
 
-              <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
-                <img src="./assets/images/recent-6.jpg" width="550" height="660" loading="lazy"
-                  alt="Your voice, your mind, your story, your vision" class="img-cover">
+              <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                <img src="{{ asset('user/assets/images/plante.jpg') }}" width="500" height="600" loading="lazy"
+                  alt="Everyone has a different life story" class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-6.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -766,39 +571,33 @@
                 <ul class="card-meta-list">
 
                   <li>
-                    <a href="#" class="card-tag">People</a>
+                    <a href="#" class="card-tag">Environnement</a>
                   </li>
 
                   <li>
-                    <a href="#" class="card-tag">Review</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Story</a>
+                    <a href="#" class="card-tag">Etude</a>
                   </li>
 
                 </ul>
 
                 <h3 class="h4">
                   <a href="#" class="card-title hover:underline">
-                    Your voice, your mind, your story, your vision
+                    Les plantes la seul solution contre le réchaufement climatique
                   </a>
                 </h3>
 
                 <p class="card-text">
-                  Nullam auctor nisi non tortor porta, id dapibus lectus rhoncus. Vivamus lobortis posuere enim
-                  finibus sodales. Phasellus
-                  quis tellus scelerisque, sagittis tortor et, maximus metus.
+                  Au fil du temps, le franc congolais a connu des fluctuations significatives par rapport au dollar américain. Des périodes de dépréciation et de volatilité ont été observées, ce qui a eu des répercussions sur l'économie congolaise dans son ensemble. La dépréciation du franc congolais peut entraîner une augmentation des prix des biens importés, rendant la vie plus difficile pour de nombreux ménages et entreprises qui dépendent de ces produits.
                 </p>
 
               </div>
 
             </div>
           </li>
-
+          
         </ul>
 
-        <button class="btn">Load more</button>
+        <button class="btn">Voir plus</button>
 
       </div>
     </section>
@@ -815,7 +614,7 @@
       <div class="container">
 
         <p class="section-subtitle">
-          <strong class="strong">Recommended</strong>
+          <strong class="strong">Recommander</strong>
         </p>
 
         <ul class="grid-list">
@@ -824,21 +623,14 @@
             <div class="blog-card">
 
               <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
-                <img src="./assets/images/recommended-1.jpg" width="300" height="360" loading="lazy"
+                <img src="{{ asset('user/assets/images/kabila.jpeg') }}" width="300" height="360" loading="lazy"
                   alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-5.jpg" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-2.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -850,7 +642,7 @@
 
                 <h3 class="h5">
                   <a href="#" class="card-title hover:underline">
-                    The trick to getting more done is to have the freedom to roam around
+                    Le seul qui peut changé les choses selon l'avis de certains Kinois
                   </a>
                 </h3>
 
@@ -858,19 +650,18 @@
 
             </div>
           </li>
-
           <li>
             <div class="blog-card">
 
               <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
-                <img src="./assets/images/recommended-2.jpg" width="300" height="360" loading="lazy"
-                  alt="Every day, in every city and town across the country " class="img-cover">
+                <img src="{{ asset('user/assets/images/comedie.jpg') }}" width="300" height="360" loading="lazy"
+                  alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-3.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-1.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -882,7 +673,7 @@
 
                 <h3 class="h5">
                   <a href="#" class="card-title hover:underline">
-                    Every day, in every city and town across the country
+                    Herman amisi a Paris
                   </a>
                 </h3>
 
@@ -890,19 +681,18 @@
 
             </div>
           </li>
-
           <li>
             <div class="blog-card">
 
               <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
-                <img src="./assets/images/recommended-3.jpg" width="300" height="360" loading="lazy"
-                  alt="I work best when my space is filled with inspiration " class="img-cover">
+                <img src="{{ asset('user/assets/images/felix.jpeg') }}" width="300" height="360" loading="lazy"
+                  alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-1.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -914,7 +704,7 @@
 
                 <h3 class="h5">
                   <a href="#" class="card-title hover:underline">
-                    I work best when my space is filled with inspiration
+                    Un nouveau plan pour stopper le vol du Trésor public
                   </a>
                 </h3>
 
@@ -922,26 +712,18 @@
 
             </div>
           </li>
-
           <li>
             <div class="blog-card">
 
               <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
-                <img src="./assets/images/recommended-4.jpg" width="300" height="360" loading="lazy"
-                  alt="I have my own definition of minimalism " class="img-cover">
+                <img src="{{ asset('user/assets/images/m23.jpeg') }}" width="300" height="360" loading="lazy"
+                  alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-4.jpg" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-3.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -953,7 +735,7 @@
 
                 <h3 class="h5">
                   <a href="#" class="card-title hover:underline">
-                    I have my own definition of minimalism
+                  600 Victimes la semaines derniers, Le M23 ne sont pas qu'a 23.
                   </a>
                 </h3>
 
@@ -961,19 +743,18 @@
 
             </div>
           </li>
-
           <li>
             <div class="blog-card">
 
               <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
-                <img src="./assets/images/recommended-5.jpg" width="300" height="360" loading="lazy"
-                  alt="Change your look and your attitude " class="img-cover">
+                <img src="{{ asset('user/assets/images/rebelle.jpg') }}" width="300" height="360" loading="lazy"
+                  alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-6.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-3.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -985,7 +766,7 @@
 
                 <h3 class="h5">
                   <a href="#" class="card-title hover:underline">
-                    Change your look and your attitude
+                    Nos frotières plein de rebelles, où sont les FARDC ? 
                   </a>
                 </h3>
 
@@ -993,19 +774,18 @@
 
             </div>
           </li>
-
           <li>
             <div class="blog-card">
 
               <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
-                <img src="./assets/images/recommended-6.jpg" width="300" height="360" loading="lazy"
-                  alt="The difference is quality " class="img-cover">
+                <img src="{{ asset('user/assets/images/recommended-6.jpg') }}" width="300" height="360" loading="lazy"
+                  alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
 
                 <ul class="avatar-list absolute">
 
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="./assets/images/author-3.jpg" width="100" height="100" loading="lazy" alt="Author"
+                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
@@ -1017,7 +797,7 @@
 
                 <h3 class="h5">
                   <a href="#" class="card-title hover:underline">
-                    The difference is quality
+                    L'informatisation des nos firmes
                   </a>
                 </h3>
 
@@ -1025,6 +805,8 @@
 
             </div>
           </li>
+
+
 
         </ul>
 
@@ -1042,13 +824,13 @@
     <section class="section newsletter">
 
       <h2 class="h2 section-title">
-        Subscribe to <strong class="strong">new posts</strong>
+        Abonnez-vous aux <strong class="strong">nouveaux articles</strong>
       </h2>
-
+    
       <form action="" class="newsletter-form">
-        <input type="email" name="email_address" placeholder="Your email address" required class="email-field">
-
-        <button type="submit" class="btn">Subscribe</button>
+        <input type="email" name="email_address" placeholder="Votre adresse e-mail" required class="email-field">
+    
+        <button type="submit" class="btn">S'abonner</button>
       </form>
 
     </section>

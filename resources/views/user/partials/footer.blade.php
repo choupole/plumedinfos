@@ -14,7 +14,7 @@
           </a>
 
           <p class="footer-text">
-            Un thème minimaliste et fonctionnel pour gérer une publication payante sur Ghost.
+            Un Plume une histoire, chez plume d'infos les news sont fluide comme une plume.
           </p>
 
         </div>
@@ -140,7 +140,7 @@
       <div class="section footer-bottom">
 
         <p class="copyright">
-          &copy; Blogy 2022. Publié par <a href="#" class="copyright-link hover:underline">codewithsadee</a>.
+          &copy; Plume d'Infos 2024. Publié par <a href="#" class="copyright-link hover:underline">allprime</a>.
         </p>
 
       </div>

@@ -9,8 +9,8 @@
   <!-- 
     - primary meta tags
   -->
-  <title>Blogy - Hey, we’re Blogy. See our thoughts, stories and ideas.</title>
-  <meta name="title" content="Blogy - Hey, we’re Blogy. See our thoughts, stories and ideas.">
+  <title>Plume d'infos - Salut, nous sommes Plume d'Infos. Découvrez nos réflexions, histoires et idées.</title>
+  <meta name="title" content="Blogy - Salut, nous sommes Plume d'Infos. Découvrez nos réflexions, histoires et idées.">
   <meta name="description" content="This is a blog html template made by codewithsadee">
 
   <!-- 
