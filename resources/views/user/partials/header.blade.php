@@ -6,7 +6,7 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" width="129" height="40" alt="Logo du blog">
+        <img src="{{asset('user/assets/images/logo.jpg' )}}" width="129" height="40" alt="Logo du blog">
       </a>
 
       <nav class="navbar" data-navbar>
