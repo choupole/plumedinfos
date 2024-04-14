@@ -13,16 +13,13 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link hover:underline" data-nav-link>Accueil</a>
+            <a href="{{ route('articles') }}" class="navbar-link hover:underline" data-nav-link>Accueil</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link hover:underline" data-nav-link>Articles récents</a>
+            <a href="{{ route('recentsPosts') }}" class="navbar-link hover:underline" data-nav-link>Articles récents</a>
           </li>
 
-          <li class="navbar-item">
-            <a href="#" class="navbar-link hover:underline" data-nav-link>Adhésion</a>
-          </li>
 
         </ul>
       </nav>
@@ -41,7 +38,9 @@
           <span class="span three"></span>
         </button>
 
-        <a href="#" class="btn">Rejoindre</a>
+        <a href="https://api.whatsapp.com/send?phone=+243828402662" class="btn whatsapp">
+          Discuter 
+        </a>
 
       </div>
 

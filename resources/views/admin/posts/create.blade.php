@@ -1,6 +1,7 @@
 @extends('admin.layouts.app')
 @section('content')
     <!-- Formulaire de création de post -->
+
         <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
@@ -13,8 +14,10 @@
             <!-- Champ du contenu -->
             <div class="form-group">
                 <label for="content" class="form-label">Contenu :</label>
-                <textarea name="content" id="content" class="form-control mb-2" rows="6" cols="50" placeholder="Entrez votre Contenu" required></textarea>
+                <textarea name="content" id="summernote" class="form-control mb-2" rows="6" cols="50" placeholder="Entrez votre Contenu" required></textarea>
             </div>
+
+
 
             <!-- Champ des images -->
             <div>
@@ -39,4 +42,25 @@
             <button type="submit" class="btn btn-pill btn-outline-primary">Créer le post</button>                    
             <button type="button" class="btn btn-pill btn-outline-dark">Annuler</button>
         </form>
+@endsection
+
+@section('scripts')
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+<script>
+    $('#summernote').summernote({
+      placeholder: 'Hello stand alone ui',
+      tabsize: 2,
+      height: 120,
+      toolbar: [
+        ['style', ['style']],
+        ['font', ['bold', 'underline', 'clear']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['table', ['table']],
+        ['insert', ['link', 'picture', 'video']],
+        ['view', ['fullscreen', 'codeview', 'help']]
+      ]
+    });
+  </script>
 @endsection

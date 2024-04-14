@@ -3,9 +3,17 @@
   <head>
     <title>Plume d'Infos</title>
     <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
     <link rel="stylesheet" href=" {{ asset('admin/src/dist/css/adminx.css') }}" media="screen" />
+    <!-- include libraries(jQuery, bootstrap) -->
+        {{-- summernote --}}
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+
 
     <!--
       # Optional Resources
@@ -57,6 +65,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <script src=" {{ asset('admin/src/dist/js/vendor.js') }}"></script>
     <script src=" {{ asset('admin/src/dist/js/adminx.js') }}"></script>
+
+
 
 
 

@@ -1,7 +1,7 @@
 <div class="adminx-sidebar expand-hover push">
     <ul class="sidebar-nav">
       <li class="sidebar-nav-item">
-        <a href="index.html" class="sidebar-nav-link active">
+        <a href="#" class="sidebar-nav-link active">
           <span class="sidebar-nav-icon">
             <i data-feather="layout"></i>
           </span>
