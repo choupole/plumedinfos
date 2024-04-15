@@ -1,82 +1,39 @@
-<div class="adminx-sidebar expand-hover push">
-    <ul class="sidebar-nav">
-      <li class="sidebar-nav-item">
-        <a href="index.html" class="sidebar-nav-link active">
-          <span class="sidebar-nav-icon">
-            <i data-feather="layout"></i>
-          </span>
-          <span class="sidebar-nav-name">
-            Dashboard
-          </span>
-          <span class="sidebar-nav-end">
-
-          </span>
+<div class="left-side-bar">
+    <div class="brand-logo">
+        <a href="{{route('dashboard')}}">
+            <img src="{{asset('user/assets/images/logo.jpg' )}}" width="50px" height="50px" alt="" class="light-logo"> &nbsp; P.I
         </a>
-      </li>
-
-      <li class="sidebar-nav-item">
-        <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#example" aria-expanded="false" aria-controls="example">
-          <span class="sidebar-nav-icon">
-            <i data-feather="align-justify"></i>
-          </span>
-          <span class="sidebar-nav-name">
-            Article
-          </span>
-          <span class="sidebar-nav-end">
-            <i data-feather="chevron-right" class="nav-collapse-icon"></i>
-          </span>
-        </a>
-
-        <ul class="sidebar-sub-nav collapse" id="example">
-          <li class="sidebar-nav-item">
-            <a href="{{route('posts.create')}}" class="sidebar-nav-link">
-              <span class="sidebar-nav-name">
-                Création
-              </span>
-            </a>
-          </li>
-
-          <li class="sidebar-nav-item">
-            <a href="{{route('posts.index')}}" class="sidebar-nav-link">
-              <span class="sidebar-nav-name">
-                Liste
-              </span>
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="sidebar-nav-item">
-        <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#navTables" aria-expanded="false" aria-controls="navTables">
-          <span class="sidebar-nav-icon">
-            <i data-feather="pie-chart"></i>
-          </span>
-          <span class="sidebar-nav-name">
-            Catégorie
-          </span>
-          <span class="sidebar-nav-end">
-            <i data-feather="chevron-right" class="nav-collapse-icon"></i>
-          </span>
-        </a>
-
-        <ul class="sidebar-sub-nav collapse" id="navTables">
-          <li class="sidebar-nav-item">
-            <a href="{{route('categories.create')}}" class="sidebar-nav-link">
-              <span class="sidebar-nav-name">
-                Création
-              </span>
-            </a>
-          </li>
-
-          <li class="sidebar-nav-item">
-            <a href="{{route('categories.index')}}" class="sidebar-nav-link">
-              <span class="sidebar-nav-name">
-                Liste
-              </span>
-            </a>
-          </li>
-        </ul>
-      </li>
-
-    </ul>
-  </div>
+        <div class="close-sidebar" data-toggle="left-sidebar-close">
+            <i class="ion-close-round"></i>
+        </div>
+    </div>
+    <div class="menu-block customscroll">
+        <div class="sidebar-menu">
+            <ul id="accordion-menu">
+                <li>
+                    <a href="  " class="dropdown-toggle no-arrow">
+                        <span class="micon icon-copy fa fa-dashboard"></span><span class="mtext">Dashboard</span>
+                    </a>
+                </li>
+                <ul id="accordion-menu">
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon icon-copy fa fa-group"></span><span class="mtext">Articles</span>
+                        </a>
+                        <ul class="submenu">
+                            
+                            <li><a href="{{ route('posts.create') }}">Nouveau</a></li>                     
+                            
+                            <li><a href="{{ route('posts.index') }}">Liste</a></li>    
+                        </ul>
+                    </li>
+                </ul>
+                <li>
+                    <a href="{{ route('categories.index') }}" class="dropdown-toggle no-arrow">
+                        <span class="micon icon-copy fa fa-folder"></span><span class="mtext">Catégories</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

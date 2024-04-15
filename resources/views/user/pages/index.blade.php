@@ -7,7 +7,7 @@
       - #HERO
     -->
 
-    <section class="section hero" aria-label="home">
+      <section class="section hero" aria-label="home">
         <div class="container">
       
           <h1 class="h1 hero-title">
@@ -77,16 +77,14 @@
                   @foreach ($categories as $category)
                     @if ($post->categories->pluck('id')->contains($category->id))
                       <li>
-                        <a href="#" class="card-tag">{{$category->name }}</a>
+                        <a href="{{ route('postsByCategories', ['id' => $category->id]) }}" class="card-tag">{{$category->name }}</a>
                       </li>
-                    @else
-                        <span>Sans Catégorie</span>
                     @endif
                   @endforeach       
                 </ul>
 
                 <h3 class="h4">
-                    <a href="{{ route('post') }}" class="card-title hover:underline">
+                    <a href="{{ route('post', ['id' => $post->id]) }}" class="card-title hover:underline">
                       {{$post->title}}
                     </a>
                   </h3>
@@ -163,11 +161,12 @@
         </div>
 
         <ul class="grid-list">
+          @foreach ($recentsPosts as $recentsPost)
           <li class="scrollbar-item">
             <div class="blog-card">
 
               <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                <img src="{{ asset('user/assets/images/santé.jpg') }}" width="500" height="600" loading="lazy"
+                <img src="{{asset('assets/uploads/posts/'.$recentsPost->image )}}" width="500" height="600" loading="lazy"
                   alt="Everyone has a different life story" class="img-cover">
 
                 <ul class="avatar-list absolute">
@@ -185,270 +184,33 @@
               <div class="card-content">
 
                 <ul class="card-meta-list">
-
-                  <li>
-                    <a href="#" class="card-tag">Santé</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Environnement</a>
-                  </li>
-
+                  @foreach ($categories as $category)
+                  @if ($recentsPost->categories->pluck('id')->contains($category->id))
+                    <li>
+                      <a href="{{ route('post', ['id' => $category->id]) }}" class="card-tag">{{$category->name }}</a>
+                    </li>
+                  @endif
+                  @endforeach  
                 </ul>
 
                 <h3 class="h4">
                   <a href="#" class="card-title hover:underline">
-                    La santé à quel prix
+                    {{$recentsPost->title}}
                   </a>
                 </h3>
 
                 <p class="card-text">
-                  Au fil du temps, le franc congolais a connu des fluctuations significatives par rapport au dollar américain. Des périodes de dépréciation et de volatilité ont été observées, ce qui a eu des répercussions sur l'économie congolaise dans son ensemble. La dépréciation du franc congolais peut entraîner une augmentation des prix des biens importés, rendant la vie plus difficile pour de nombreux ménages et entreprises qui dépendent de ces produits.
+                  {{$recentsPost->title}}
                 </p>
 
               </div>
 
             </div>
-          </li>
-          <li class="scrollbar-item">
-            <div class="blog-card">
-
-              <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                <img src="{{ asset('user/assets/images/economie.jpg') }}" width="500" height="600" loading="lazy"
-                  alt="Everyone has a different life story" class="img-cover">
-
-                <ul class="avatar-list absolute">
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                </ul>
-              </figure>
-
-              <div class="card-content">
-
-                <ul class="card-meta-list">
-
-                  <li>
-                    <a href="#" class="card-tag">Comptabilité</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Finance</a>
-                  </li>
-
-                </ul>
-
-                <h3 class="h4">
-                  <a href="#" class="card-title hover:underline">
-                    Le Taux d'agroissement dans le Monde à doublé depuis 2000
-                  </a>
-                </h3>
-
-                <p class="card-text">
-                  Au fil du temps, le franc congolais a connu des fluctuations significatives par rapport au dollar américain. Des périodes de dépréciation et de volatilité ont été observées, ce qui a eu des répercussions sur l'économie congolaise dans son ensemble. La dépréciation du franc congolais peut entraîner une augmentation des prix des biens importés, rendant la vie plus difficile pour de nombreux ménages et entreprises qui dépendent de ces produits.
-                </p>
-
-              </div>
-
-            </div>
-          </li>
-          <li class="scrollbar-item">
-            <div class="blog-card">
-
-              <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                <img src="{{ asset('user/assets/images/portdematadi.jpg') }}" width="500" height="600" loading="lazy"
-                  alt="Everyone has a different life story" class="img-cover">
-
-                <ul class="avatar-list absolute">
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                </ul>
-              </figure>
-
-              <div class="card-content">
-
-                <ul class="card-meta-list">
-
-                  <li>
-                    <a href="#" class="card-tag">Politique</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Finance</a>
-                  </li>
-
-                </ul>
-
-                <h3 class="h4">
-                  <a href="#" class="card-title hover:underline">
-                    Le port de Matadi est-il vivant ou mort ? 
-                  </a>
-                </h3>
-
-                <p class="card-text">
-                  Au fil du temps, le franc congolais a connu des fluctuations significatives par rapport au dollar américain. Des périodes de dépréciation et de volatilité ont été observées, ce qui a eu des répercussions sur l'économie congolaise dans son ensemble. La dépréciation du franc congolais peut entraîner une augmentation des prix des biens importés, rendant la vie plus difficile pour de nombreux ménages et entreprises qui dépendent de ces produits.
-                </p>
-
-              </div>
-
-            </div>
-          </li>
-          <li class="scrollbar-item">
-            <div class="blog-card">
-
-              <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                <img src="{{ asset('user/assets/images/estDuPays.jpg') }}" width="500" height="600" loading="lazy"
-                  alt="Everyone has a different life story" class="img-cover">
-
-                <ul class="avatar-list absolute">
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                </ul>
-              </figure>
-
-              <div class="card-content">
-
-                <ul class="card-meta-list">
-
-                  <li>
-                    <a href="#" class="card-tag">Conflit</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Finance</a>
-                  </li>
-
-                </ul>
-
-                <h3 class="h4">
-                  <a href="#" class="card-title hover:underline">
-                    Le M23 qui le finance ? 
-                  </a>
-                </h3>
-
-                <p class="card-text">
-                  Au fil du temps, le franc congolais a connu des fluctuations significatives par rapport au dollar américain. Des périodes de dépréciation et de volatilité ont été observées, ce qui a eu des répercussions sur l'économie congolaise dans son ensemble. La dépréciation du franc congolais peut entraîner une augmentation des prix des biens importés, rendant la vie plus difficile pour de nombreux ménages et entreprises qui dépendent de ces produits.
-                </p>
-
-              </div>
-
-            </div>
-          </li>
-          <li class="scrollbar-item">
-            <div class="blog-card">
-
-              <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                <img src="{{ asset('user/assets/images/fruit.jpg') }}" width="500" height="600" loading="lazy"
-                  alt="Everyone has a different life story" class="img-cover">
-
-                <ul class="avatar-list absolute">
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                </ul>
-              </figure>
-
-              <div class="card-content">
-
-                <ul class="card-meta-list">
-
-                  <li>
-                    <a href="#" class="card-tag">Santé</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Bien être</a>
-                  </li>
-
-                </ul>
-
-                <h3 class="h4">
-                  <a href="#" class="card-title hover:underline">
-                    Le legume sont-ils vraiment importants ? L'avis d'un expert de l'Unikin
-                  </a>
-                </h3>
-
-                <p class="card-text">
-                  Au fil du temps, le franc congolais a connu des fluctuations significatives par rapport au dollar américain. Des périodes de dépréciation et de volatilité ont été observées, ce qui a eu des répercussions sur l'économie congolaise dans son ensemble. La dépréciation du franc congolais peut entraîner une augmentation des prix des biens importés, rendant la vie plus difficile pour de nombreux ménages et entreprises qui dépendent de ces produits.
-                </p>
-
-              </div>
-
-            </div>
-          </li>
-          <li class="scrollbar-item">
-            <div class="blog-card">
-
-              <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                <img src="{{ asset('user/assets/images/plante.jpg') }}" width="500" height="600" loading="lazy"
-                  alt="Everyone has a different life story" class="img-cover">
-
-                <ul class="avatar-list absolute">
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                </ul>
-              </figure>
-
-              <div class="card-content">
-
-                <ul class="card-meta-list">
-
-                  <li>
-                    <a href="#" class="card-tag">Environnement</a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-tag">Etude</a>
-                  </li>
-
-                </ul>
-
-                <h3 class="h4">
-                  <a href="#" class="card-title hover:underline">
-                    Les plantes la seul solution contre le réchaufement climatique
-                  </a>
-                </h3>
-
-                <p class="card-text">
-                  Au fil du temps, le franc congolais a connu des fluctuations significatives par rapport au dollar américain. Des périodes de dépréciation et de volatilité ont été observées, ce qui a eu des répercussions sur l'économie congolaise dans son ensemble. La dépréciation du franc congolais peut entraîner une augmentation des prix des biens importés, rendant la vie plus difficile pour de nombreux ménages et entreprises qui dépendent de ces produits.
-                </p>
-
-              </div>
-
-            </div>
-          </li>
-          
+          </li> 
+          @endforeach        
         </ul>
 
-        <button class="btn">Voir plus</button>
+        <button class="btn"> <a href="{{ route('recentsPosts') }}">Voir plus</a></button>
 
       </div>
     </section>
@@ -463,204 +225,47 @@
 
     <section class="section recommended" aria-label="recommended post">
       <div class="container">
-
+  
         <p class="section-subtitle">
           <strong class="strong">Recommander</strong>
         </p>
-
+  
         <ul class="grid-list">
-
+          @foreach ($randomPosts as $randomPost)
           <li>
             <div class="blog-card">
-
+  
               <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
-                <img src="{{ asset('user/assets/images/kabila.jpeg') }}" width="300" height="360" loading="lazy"
+                <img src="{{asset('assets/uploads/posts/'.$randomPost->image )}}" width="300" height="360" loading="lazy"
                   alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
-
+  
                 <ul class="avatar-list absolute">
-
+  
                   <li class="avatar-item">
                     <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
                       <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
                         class="img-cover">
                     </a>
                   </li>
-
+  
                 </ul>
               </figure>
-
+  
               <div class="card-content">
-
+  
                 <h3 class="h5">
-                  <a href="#" class="card-title hover:underline">
-                    Le seul qui peut changé les choses selon l'avis de certains Kinois
+                  <a href="{{ route('post', ['id' => $randomPost->id]) }}" class="card-title hover:underline">
+                    {{$randomPost->title}}
                   </a>
                 </h3>
-
+  
               </div>
-
+  
             </div>
-          </li>
-          <li>
-            <div class="blog-card">
-
-              <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
-                <img src="{{ asset('user/assets/images/comedie.jpg') }}" width="300" height="360" loading="lazy"
-                  alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
-
-                <ul class="avatar-list absolute">
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="{{ asset('user/assets/images/author-1.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                </ul>
-              </figure>
-
-              <div class="card-content">
-
-                <h3 class="h5">
-                  <a href="#" class="card-title hover:underline">
-                    Herman amisi a Paris
-                  </a>
-                </h3>
-
-              </div>
-
-            </div>
-          </li>
-          <li>
-            <div class="blog-card">
-
-              <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
-                <img src="{{ asset('user/assets/images/felix.jpeg') }}" width="300" height="360" loading="lazy"
-                  alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
-
-                <ul class="avatar-list absolute">
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                </ul>
-              </figure>
-
-              <div class="card-content">
-
-                <h3 class="h5">
-                  <a href="#" class="card-title hover:underline">
-                    Un nouveau plan pour stopper le vol du Trésor public
-                  </a>
-                </h3>
-
-              </div>
-
-            </div>
-          </li>
-          <li>
-            <div class="blog-card">
-
-              <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
-                <img src="{{ asset('user/assets/images/m23.jpeg') }}" width="300" height="360" loading="lazy"
-                  alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
-
-                <ul class="avatar-list absolute">
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                </ul>
-              </figure>
-
-              <div class="card-content">
-
-                <h3 class="h5">
-                  <a href="#" class="card-title hover:underline">
-                  600 Victimes la semaines derniers, Le M23 ne sont pas qu'a 23.
-                  </a>
-                </h3>
-
-              </div>
-
-            </div>
-          </li>
-          <li>
-            <div class="blog-card">
-
-              <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
-                <img src="{{ asset('user/assets/images/rebelle.jpg') }}" width="300" height="360" loading="lazy"
-                  alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
-
-                <ul class="avatar-list absolute">
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="{{ asset('user/assets/images/author-3.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                </ul>
-              </figure>
-
-              <div class="card-content">
-
-                <h3 class="h5">
-                  <a href="#" class="card-title hover:underline">
-                    Nos frotières plein de rebelles, où sont les FARDC ? 
-                  </a>
-                </h3>
-
-              </div>
-
-            </div>
-          </li>
-          <li>
-            <div class="blog-card">
-
-              <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
-                <img src="{{ asset('user/assets/images/recommended-6.jpg') }}" width="300" height="360" loading="lazy"
-                  alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
-
-                <ul class="avatar-list absolute">
-
-                  <li class="avatar-item">
-                    <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
-                      <img src="{{ asset('user/assets/images/author-5.jpg') }}" width="100" height="100" loading="lazy" alt="Author"
-                        class="img-cover">
-                    </a>
-                  </li>
-
-                </ul>
-              </figure>
-
-              <div class="card-content">
-
-                <h3 class="h5">
-                  <a href="#" class="card-title hover:underline">
-                    L'informatisation des nos firmes
-                  </a>
-                </h3>
-
-              </div>
-
-            </div>
-          </li>
-
-
-
+          </li> 
+          @endforeach
         </ul>
-
+  
       </div>
     </section>
 
@@ -687,4 +292,27 @@
     </section>
 
   </article>
+@endsection
+
+@section('scripts')
+  <script>
+          // Récupération des éléments de la liste
+      var listItems = document.querySelectorAll('.grid-list .scrollbar-item');
+
+      // Masquer les éléments supplémentaires
+      for (var i = 3; i < listItems.length; i++) {
+        listItems[i].style.display = 'none';
+      }
+
+      // Fonction de gestionnaire d'événement pour le clic sur le bouton "Voir plus"
+      document.querySelector('.btn').addEventListener('click', function() {
+        // Afficher les éléments supplémentaires
+        for (var i = 3; i < listItems.length; i++) {
+          listItems[i].style.display = 'block';
+        }
+
+        // Masquer le bouton "Voir plus"
+        this.style.display = 'none';
+      });
+  </script>
 @endsection

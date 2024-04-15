@@ -11,8 +11,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('user.pages.index');
 // });
 
-Route::get('/post', [HomeController::class, 'post'])->name('post');
+Route::get('/post/{id}', [HomeController::class, 'post'])->name('post');
 Route::get('/', [HomeController::class, 'articles'])->name('articles');
+Route::get('/recentsPosts', [HomeController::class, 'recentsPosts'])->name('recentsPosts');
+Route::get('/postsByCategories{id}', [HomeController::class, 'postsByCategories'])->name('postsByCategories');
 Route::get('/dashboard', [AdminController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

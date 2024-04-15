@@ -1,68 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Plume d'Infos</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
-    <link rel="stylesheet" href=" {{ asset('admin/src/dist/css/adminx.css') }}" media="screen" />
+<html>
+<head>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8">
+	<title>Admin</title>
 
-    <!--
-      # Optional Resources
-      Feel free to delete these if you don't need them in your project
-    -->
-  </head>
-  <body>
-    <div class="adminx-container">
+	@yield('styles')
 
-        {{-- start navbar --}}
+	<!-- Site favicon -->
+	<link href="{{ asset( 'AdminArtiste/vendors/images/logoA.png') }}" rel="shortcut icon">
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href=" {{ asset( 'AdminArtiste/vendors/styles/core.css') }}">
+	<link rel="stylesheet" type="text/css" href=" {{ asset( 'AdminArtiste/src/plugins/sweetalert2/sweetalert2.css') }}">
+	<link rel="stylesheet" type="text/css" href=" {{asset ('AdminArtiste/vendors/styles/icon-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href=" {{asset ('AdminArtiste/src/plugins/datatables/css/dataTables.bootstrap4.min.css')}} ">
+	<link rel="stylesheet" type="text/css" href=" {{asset('AdminArtiste/src/plugins/datatables/css/responsive.bootstrap4.min.css')}}">
+	<link rel="stylesheet" type="text/css" href=" {{asset('AdminArtiste/src/plugins/jquery-steps/jquery.steps.css')}}">
+	<link rel="stylesheet" type="text/css" href=" {{asset ('AdminArtiste/vendors/styles/core.css')}}">
+	<link rel="stylesheet" type="text/css" href=" {{asset ('AdminArtiste/vendors/styles/icon-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href=" {{asset ('AdminArtiste/vendors/styles/style.css')}}">
+	<link rel="stylesheet" type="text/css" href="	{{asset ('AdminArtiste/src/plugins/switchery/switchery.min.css')}}">
+	<!-- bootstrap-tagsinput css -->
+	<link rel="stylesheet" type="text/css" href=" {{asset('AdminArtiste/src/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css')}} ">
+	<!-- bootstrap-touchspin css -->
+	<link rel="stylesheet" type="text/css" href=" {{asset('AdminArtiste/src/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.css')}} ">
 
-        @include('admin.partials.navbar')
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
+	    <!-- include libraries(jQuery, bootstrap) -->
 
-        {{-- end navbar --}}
 
+		<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-      <!-- expand-hover push -->
-      <!-- Sidebar -->
-        @include('admin.partials.sidebar')
+		gtag('config', 'UA-119386393-1');
+	</script>
+</head>
+<body>
 
-    <!-- Sidebar End -->
+    {{-- @include('partials.loader') --}}
 
-      <!-- adminx-content-aside -->
-      <div class="adminx-content">
-        <!-- <div class="adminx-aside">
+    @include('admin.partials.header')
 
-        </div> -->
+    @include('admin.partials.sidebar')
 
-        <div class="adminx-main-content">
-          <div class="container-fluid">
-            <!-- BreadCrumb -->
-            @include('admin.partials.breadcrumb')
-            {{-- end breadcrumb --}}
+	<div class="mobile-menu-overlay"></div>
 
-            <div class="pb-3">
-              <h1> {{$page}} </h1>
-            </div>
+	<div class="main-container">
+		<div class="pd-ltr-20 xs-pd-20-10">
             @yield('content')
 
-          </div>
-        </div>
-      </div>
-    </div>
+            @include('admin.partials.footer')
+		</div>
+	</div>
+	<!-- js -->
+		@yield('scirpts')
+	<script src={{asset('AdminArtiste/vendors/scripts/core.js')}}></script>
+	<script src={{asset('AdminArtiste/vendors/scripts/script.min.js')}}></script>
+	<script src={{asset('AdminArtiste/vendors/scripts/process.js')}}></script>
+	<script src={{asset ('AdminArtiste/vendors/scripts/layout-settings.js')}}></script>
+	<script src={{asset('AdminArtiste/src/plugins/apexcharts/apexcharts.min.js')}}></script>
+	<script src={{asset('AdminArtiste/src/plugins/datatables/js/jquery.dataTables.min.js')}}></script>
+	<script src={{asset('AdminArtiste/src/plugins/datatables/js/dataTables.bootstrap4.min.js')}}></script>
+	<script src={{asset('AdminArtiste/src/plugins/datatables/js/dataTables.responsive.min.js')}}></script>
+	<script src={{asset('AdminArtiste/src/plugins/datatables/js/responsive.bootstrap4.min.js')}}></script>
+	<script src={{asset ('AdminArtiste/vendors/scripts/dashboard.js')}}></script>
 
-    @yield('scirpts')
-    <!-- If you prefer jQuery these are the required scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    <script src=" {{ asset('admin/src/dist/js/vendor.js') }}"></script>
-    <script src=" {{ asset('admin/src/dist/js/adminx.js') }}"></script>
+		<!-- switchery js -->
+	<script src={{asset ('AdminArtiste/src/plugins/switchery/switchery.min.js')}}></script>
+		<!-- bootstrap-tagsinput js -->
+	<script src={{asset ('AdminArtiste/src/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js')}}></script>
+		<!-- bootstrap-touchspin js -->
+	<script src={{asset ('AdminArtiste/src/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js')}}></script>
+	<script src={{asset ('AdminArtiste/vendors/scripts/advanced-components.js')}}></script>
 
 
-
-
-    <!-- If you prefer vanilla JS these are the only required scripts -->
-    <!-- script src="./dist/js/vendor.js"></script>
-    <script src="./dist/js/adminx.vanilla.js"></script-->
-  </body>
+		<!-- add sweet alert js & css in footer -->
+		<script src={{asset ('AdminArtiste/src/plugins/sweetalert2/sweetalert2.all.js')}}></script>
+		<script src={{asset ('AdminArtiste/src/plugins/sweetalert2/sweet-alert.init.js')}}></script>
+	@yield('scripts')
+</body>
 </html>

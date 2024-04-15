@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\Category;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -47,8 +48,17 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function show($id)
     {
+        $category = Category::findOrFail($id);
+
+        $postsByCategories = Post::whereHas('categories', function ($query) use ($category) {
+            $query->where('categories.id', $category->id);
+        })->get();
+
+        $categories = Category::all();
+
+        return view('admin.categories.show', compact('postsByCategories', 'category', 'categories'));
     }
 
     /**
