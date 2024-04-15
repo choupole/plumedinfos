@@ -88,8 +88,12 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show($id)
     {
+        $post = Post::findOrFail($id);
+        $categories = Category::all();
+
+        return view('admin.posts.show', compact('post', 'categories'));
     }
 
     /**
